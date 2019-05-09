@@ -1,3 +1,3 @@
-#Rock Paper Scissors
+# Rock, Paper, Scissors
 
-From the ciricculum of The Odin Project.  (https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors)
+From the curriculum of The Odin Project.  (https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors)
