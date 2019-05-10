@@ -8,7 +8,43 @@
 </head>
 <body>
     <script>
-    
+        function humanPlay () {
+            let humanSelection = prompt ('Rock, Paper, or Scissors?');
+            humanSelection = humanSelection.toLowerCase ();
+            humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1);
+            console.log (humanSelection);
+            return humanSelection;
+        }
+        humanPlay ();
+        
+        function computerPlay () {
+            let num = Math.random();
+            if (num < 0.34) {
+                computerSelection = 'Rock';
+            }
+            else if (num < 0.67) {
+                computerSelection = 'Paper';
+            }
+            else {
+                computerSelection = 'Scissors';
+            }
+            console.log (computerSelection);
+            return computerSelection;
+            }
+        computerPlay ();
+
+        function playRound(humanSelection, computerSelection){
+            let roundResult;
+            //tie
+            if (humanSelection = computerSelection) {
+                roundResult = 'Tie Game: '+ humanSelection + ' and ' + computerSelection + ' .';
+                return roundResult;
+            }
+            //Rock wins
+            
+        }
+
+
     </script>
 </body>
 </html>
