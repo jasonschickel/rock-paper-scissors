@@ -8,17 +8,21 @@
 </head>
 <body>
     <script>
+        let humanSelection;
+        let computerSelection;
+        let roundResult;
+        
         function humanPlay () {
             let humanSelection = prompt ('Rock, Paper, or Scissors?');
             humanSelection = humanSelection.toLowerCase ();
             humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1);
-            console.log (humanSelection);
             return humanSelection;
         }
-        humanPlay ();
+        console.log(humanPlay ());
         
         function computerPlay () {
             let num = Math.random();
+            let computerSelection;
             if (num < 0.34) {
                 computerSelection = 'Rock';
             }
@@ -28,23 +32,41 @@
             else {
                 computerSelection = 'Scissors';
             }
-            console.log (computerSelection);
             return computerSelection;
             }
-        computerPlay ();
+        console.log(computerPlay ());
 
         function playRound(humanSelection, computerSelection){
             let roundResult;
             //tie
-            if (humanSelection = computerSelection) {
+            if (humanSelection == computerSelection) {
                 roundResult = 'Tie Game: '+ humanSelection + ' and ' + computerSelection + ' .';
                 return roundResult;
             }
             //Rock wins
-            
+            else if (humanSelection == 'Rock' && computerSelection == "Scissors") {
+                roundResult = 'You win! ' + humanSelection + ' beats ' + computerSelection + '.';
+                return roundResult;
+            }
+
+            //Paper wins
+            else if (humanSelection == 'Paper' && computerSelection == 'Rock') {
+                roundResult = 'You win! ' + humanSelection + ' beats ' + computerSelection + '.';
+                return roundResult;
+            }
+
+            //Scissors wins
+            else if (humanSelection == 'Scissors' && computerSelection == 'Rock') {
+                roundResult = 'You win! ' + humanSelection + ' beats ' + computerSelection + '.';
+                return roundResult;
+            }
+            else {
+                roundResult = 'You lose! ' + computerSelection + ' beats ' + humanSelection + '.';
+                return roundResult;
+            }
         }
 
-
+        console.log(playRound (humanSelection, computerSelection));
     </script>
 </body>
 </html>
