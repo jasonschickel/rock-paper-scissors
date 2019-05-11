@@ -8,9 +8,6 @@
 </head>
 <body>
     <script>
-        let humanSelection;
-        let computerSelection;
-        let roundResult;
         
         function humanPlay () {
             let humanSelection = prompt ('Rock, Paper, or Scissors?');
@@ -18,7 +15,6 @@
             humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1);
             return humanSelection;
         }
-        console.log(humanPlay ());
         
         function computerPlay () {
             let num = Math.random();
@@ -34,7 +30,6 @@
             }
             return computerSelection;
             }
-        console.log(computerPlay ());
 
         function playRound(humanSelection, computerSelection){
             let roundResult;
@@ -66,7 +61,8 @@
             }
         }
 
-        console.log(playRound (humanSelection, computerSelection));
+        console.log (playRound (humanPlay(), computerPlay()));
+
     </script>
 </body>
 </html>
