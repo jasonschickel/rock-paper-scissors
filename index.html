@@ -61,8 +61,23 @@
             }
         }
 
-        console.log (playRound (humanPlay(), computerPlay()));
+        //Saving for testing later (works up to here)
+        //console.log (playRound (humanPlay(), computerPlay ()));
 
+        function game () {
+            let counter = 1;
+            if (counter <5) {
+                counter++
+            };
+            const result = playRound (humanPlay(), computerPlay());
+            console.log (result);
+        }
+
+        game ();
+        game ();
+        game ();
+        game ();
+        game ();
     </script>
 </body>
 </html>
